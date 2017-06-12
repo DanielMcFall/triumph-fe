@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>TriumphGG</Name>
+    <RootNamespace>TriumphGG</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b837e959-8063-4100-b9ed-b6d1a101f2ce</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>bin\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="API\mocks\game.js" />
+    <Compile Include="API\mocks\summoner.js" />
+    <Compile Include="app.js" />
+    <Compile Include="node_modules\triumph-be\api_client.js" />
+    <Compile Include="node_modules\triumph-be\response_handler.js" />
+    <Compile Include="public\javascripts\summoner_search.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\users.js" />
+    <Compile Include="bin\www" />
+    <Content Include="API\mocks\json\game.json" />
+    <Content Include="API\mocks\json\guromin.json" />
+    <Content Include="contributors.txt" />
+    <Content Include="package.json" />
+    <Content Include="public\background\aatrox.png" />
+    <Content Include="public\background\ahri.png" />
+    <Content Include="public\background\akali.png" />
+    <Content Include="public\background\alistar.png" />
+    <Content Include="public\background\amumu.png" />
+    <Content Include="public\background\anivia.png" />
+    <Content Include="public\background\annie.png" />
+    <Content Include="public\background\ashe.png" />
+    <Content Include="public\background\aurelion_sol.png" />
+    <Content Include="public\background\azir.png" />
+    <Content Include="public\background\bard.png" />
+    <Content Include="public\background\blitzcrank.png" />
+    <Content Include="public\background\brand.png" />
+    <Content Include="public\background\braum.png" />
+    <Content Include="public\background\caitlyn.png" />
+    <Content Include="public\background\cassiopeia.png" />
+    <Content Include="public\background\chogath.png" />
+    <Content Include="public\background\corki.png" />
+    <Content Include="public\background\darius.png" />
+    <Content Include="public\background\diana.png" />
+    <Content Include="public\background\draven.png" />
+    <Content Include="public\background\ekko.png" />
+    <Content Include="public\background\elise.png" />
+    <Content Include="public\background\evelynn.png" />
+    <Content Include="public\background\ezreal.png" />
+    <Content Include="public\background\fiddlesticks.png" />
+    <Content Include="public\background\fiora.png" />
+    <Content Include="public\background\fizz.png" />
+    <Content Include="public\background\galio.png" />
+    <Content Include="public\background\gangplank.png" />
+    <Content Include="public\background\garen.png" />
+    <Content Include="public\background\gnar.png" />
+    <Content Include="public\background\gragas.png" />
+    <Content Include="public\background\graves.png" />
+    <Content Include="public\background\hecarim.png" />
+    <Content Include="public\background\heimerdinger.png" />
+    <Content Include="public\background\illaoi.png" />
+    <Content Include="public\background\irelia.png" />
+    <Content Include="public\background\janna.png" />
+    <Content Include="public\background\jarvaniv.png" />
+    <Content Include="public\background\jax.png" />
+    <Content Include="public\background\jayce.png" />
+    <Content Include="public\background\jhin.png" />
+    <Content Include="public\background\jinx.png" />
+    <Content Include="public\background\kalista.png" />
+    <Content Include="public\background\karma.png" />
+    <Content Include="public\background\karthus.png" />
+    <Content Include="public\background\kassadin.png" />
+    <Content Include="public\background\katarina.png" />
+    <Content Include="public\background\kayle.png" />
+    <Content Include="public\background\kennen.png" />
+    <Content Include="public\background\khazix.png" />
+    <Content Include="public\background\kindred.png" />
+    <Content Include="public\background\kled.png" />
+    <Content Include="public\background\kogmaw.png" />
+    <Content Include="public\background\lee_sin.png" />
+    <Content Include="public\background\leona.png" />
+    <Content Include="public\background\le_blanc.png" />
+    <Content Include="public\background\lissandra.png" />
+    <Content Include="public\background\lucian.png" />
+    <Content Include="public\background\lulu.png" />
+    <Content Include="public\background\lux.png" />
+    <Content Include="public\background\malphite.png" />
+    <Content Include="public\background\malzahar.png" />
+    <Content Include="public\background\maokai.png" />
+    <Content Include="public\background\master_yi.png" />
+    <Content Include="public\background\miss_fortune.png" />
+    <Content Include="public\background\mordekaiser.png" />
+    <Content Include="public\background\morgana.png" />
+    <Content Include="public\background\mundo.png" />
+    <Content Include="public\background\nami.png" />
+    <Content Include="public\background\nasus.png" />
+    <Content Include="public\background\nautilus.png" />
+    <Content Include="public\background\nidalee.png" />
+    <Content Include="public\background\nocturne.png" />
+    <Content Include="public\background\nunu.png" />
+    <Content Include="public\background\olaf.png" />
+    <Content Include="public\background\orianna.png" />
+    <Content Include="public\background\pantheon.png" />
+    <Content Include="public\background\poppy.png" />
+    <Content Include="public\background\quinn.png" />
+    <Content Include="public\background\rammus.png" />
+    <Content Include="public\background\reksai.png" />
+    <Content Include="public\background\renekton.png" />
+    <Content Include="public\background\rengar.png" />
+    <Content Include="public\background\riven.png" />
+    <Content Include="public\background\rumble.png" />
+    <Content Include="public\background\ryze.png" />
+    <Content Include="public\background\sejuani.png" />
+    <Content Include="public\background\shaco.png" />
+    <Content Include="public\background\shen.png" />
+    <Content Include="public\background\shyvana.png" />
+    <Content Include="public\background\singed.png" />
+    <Content Include="public\background\sion.png" />
+    <Content Include="public\background\sivir.png" />
+    <Content Include="public\background\skarner.png" />
+    <Content Include="public\background\sona.png" />
+    <Content Include="public\background\soraka.png" />
+    <Content Include="public\background\swain.png" />
+    <Content Include="public\background\syndra.png" />
+    <Content Include="public\background\tahm_kench.png" />
+    <Content Include="public\background\taliyah.png" />
+    <Content Include="public\background\talon.png" />
+    <Content Include="public\background\taric.png" />
+    <Content Include="public\background\teemo.png" />
+    <Content Include="public\background\thresh.png" />
+    <Content Include="public\background\tristana.png" />
+    <Content Include="public\background\triumphant_ryze.png" />
+    <Content Include="public\background\trundle.png" />
+    <Content Include="public\background\tryndamere.png" />
+    <Content Include="public\background\twisted_fate.png" />
+    <Content Include="public\background\twitch.png" />
+    <Content Include="public\background\udyr.png" />
+    <Content Include="public\background\urgot.png" />
+    <Content Include="public\background\varus.png" />
+    <Content Include="public\background\vayne.png" />
+    <Content Include="public\background\veigar.png" />
+    <Content Include="public\background\velkoz.png" />
+    <Content Include="public\background\vi.png" />
+    <Content Include="public\background\viktor.png" />
+    <Content Include="public\background\vladimir.png" />
+    <Content Include="public\background\volibear.png" />
+    <Content Include="public\background\warwick.png" />
+    <Content Include="public\background\wu_kong.png" />
+    <Content Include="public\background\xerath.png" />
+    <Content Include="public\background\xin_zhao.png" />
+    <Content Include="public\background\yasuo.png" />
+    <Content Include="public\background\yorick.png" />
+    <Content Include="public\background\zac.png" />
+    <Content Include="public\background\zed.png" />
+    <Content Include="public\background\ziggs.png" />
+    <Content Include="public\background\zilean.png" />
+    <Content Include="public\background\zyra.png" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\images\backgrounds\aatrox.png" />
+    <Content Include="public\images\backgrounds\ahri.png" />
+    <Content Include="public\images\backgrounds\akali.png" />
+    <Content Include="public\images\backgrounds\alistar.png" />
+    <Content Include="public\images\backgrounds\amumu.png" />
+    <Content Include="public\images\backgrounds\anivia.png" />
+    <Content Include="public\images\backgrounds\annie.png" />
+    <Content Include="public\images\backgrounds\ashe.png" />
+    <Content Include="public\images\backgrounds\aurelion_sol.png" />
+    <Content Include="public\images\backgrounds\azir.png" />
+    <Content Include="public\images\backgrounds\bard.png" />
+    <Content Include="public\images\backgrounds\blitzcrank.png" />
+    <Content Include="public\images\backgrounds\brand.png" />
+    <Content Include="public\images\backgrounds\braum.png" />
+    <Content Include="public\images\backgrounds\caitlyn.png" />
+    <Content Include="public\images\backgrounds\cassiopeia.png" />
+    <Content Include="public\images\backgrounds\chogath.png" />
+    <Content Include="public\images\backgrounds\corki.png" />
+    <Content Include="public\images\backgrounds\darius.png" />
+    <Content Include="public\images\backgrounds\diana.png" />
+    <Content Include="public\images\backgrounds\draven.png" />
+    <Content Include="public\images\backgrounds\ekko.png" />
+    <Content Include="public\images\backgrounds\elise.png" />
+    <Content Include="public\images\backgrounds\evelynn.png" />
+    <Content Include="public\images\backgrounds\ezreal.png" />
+    <Content Include="public\images\backgrounds\fiddlesticks.png" />
+    <Content Include="public\images\backgrounds\fiora.png" />
+    <Content Include="public\images\backgrounds\fizz.png" />
+    <Content Include="public\images\backgrounds\galio.png" />
+    <Content Include="public\images\backgrounds\gangplank.png" />
+    <Content Include="public\images\backgrounds\garen.png" />
+    <Content Include="public\images\backgrounds\gnar.png" />
+    <Content Include="public\images\backgrounds\gragas.png" />
+    <Content Include="public\images\backgrounds\graves.png" />
+    <Content Include="public\images\backgrounds\hecarim.png" />
+    <Content Include="public\images\backgrounds\heimerdinger.png" />
+    <Content Include="public\images\backgrounds\illaoi.png" />
+    <Content Include="public\images\backgrounds\irelia.png" />
+    <Content Include="public\images\backgrounds\janna.png" />
+    <Content Include="public\images\backgrounds\jarvaniv.png" />
+    <Content Include="public\images\backgrounds\jax.png" />
+    <Content Include="public\images\backgrounds\jayce.png" />
+    <Content Include="public\images\backgrounds\jhin.png" />
+    <Content Include="public\images\backgrounds\jinx.png" />
+    <Content Include="public\images\backgrounds\kalista.png" />
+    <Content Include="public\images\backgrounds\karma.png" />
+    <Content Include="public\images\backgrounds\karthus.png" />
+    <Content Include="public\images\backgrounds\kassadin.png" />
+    <Content Include="public\images\backgrounds\katarina.png" />
+    <Content Include="public\images\backgrounds\kayle.png" />
+    <Content Include="public\images\backgrounds\kennen.png" />
+    <Content Include="public\images\backgrounds\khazix.png" />
+    <Content Include="public\images\backgrounds\kindred.png" />
+    <Content Include="public\images\backgrounds\kled.png" />
+    <Content Include="public\images\backgrounds\kogmaw.png" />
+    <Content Include="public\images\backgrounds\lee_sin.png" />
+    <Content Include="public\images\backgrounds\leona.png" />
+    <Content Include="public\images\backgrounds\le_blanc.png" />
+    <Content Include="public\images\backgrounds\lissandra.png" />
+    <Content Include="public\images\backgrounds\lucian.png" />
+    <Content Include="public\images\backgrounds\lulu.png" />
+    <Content Include="public\images\backgrounds\lux.png" />
+    <Content Include="public\images\backgrounds\malphite.png" />
+    <Content Include="public\images\backgrounds\malzahar.png" />
+    <Content Include="public\images\backgrounds\maokai.png" />
+    <Content Include="public\images\backgrounds\master_yi.png" />
+    <Content Include="public\images\backgrounds\miss_fortune.png" />
+    <Content Include="public\images\backgrounds\mordekaiser.png" />
+    <Content Include="public\images\backgrounds\morgana.png" />
+    <Content Include="public\images\backgrounds\mundo.png" />
+    <Content Include="public\images\backgrounds\nami.png" />
+    <Content Include="public\images\backgrounds\nasus.png" />
+    <Content Include="public\images\backgrounds\nautilus.png" />
+    <Content Include="public\images\backgrounds\nidalee.png" />
+    <Content Include="public\images\backgrounds\nocturne.png" />
+    <Content Include="public\images\backgrounds\nunu.png" />
+    <Content Include="public\images\backgrounds\olaf.png" />
+    <Content Include="public\images\backgrounds\orianna.png" />
+    <Content Include="public\images\backgrounds\pantheon.png" />
+    <Content Include="public\images\backgrounds\poppy.png" />
+    <Content Include="public\images\backgrounds\quinn.png" />
+    <Content Include="public\images\backgrounds\rammus.png" />
+    <Content Include="public\images\backgrounds\reksai.png" />
+    <Content Include="public\images\backgrounds\renekton.png" />
+    <Content Include="public\images\backgrounds\rengar.png" />
+    <Content Include="public\images\backgrounds\riven.png" />
+    <Content Include="public\images\backgrounds\rumble.png" />
+    <Content Include="public\images\backgrounds\ryze.png" />
+    <Content Include="public\images\backgrounds\sejuani.png" />
+    <Content Include="public\images\backgrounds\shaco.png" />
+    <Content Include="public\images\backgrounds\shen.png" />
+    <Content Include="public\images\backgrounds\shyvana.png" />
+    <Content Include="public\images\backgrounds\singed.png" />
+    <Content Include="public\images\backgrounds\sion.png" />
+    <Content Include="public\images\backgrounds\sivir.png" />
+    <Content Include="public\images\backgrounds\skarner.png" />
+    <Content Include="public\images\backgrounds\sona.png" />
+    <Content Include="public\images\backgrounds\soraka.png" />
+    <Content Include="public\images\backgrounds\swain.png" />
+    <Content Include="public\images\backgrounds\syndra.png" />
+    <Content Include="public\images\backgrounds\tahm_kench.png" />
+    <Content Include="public\images\backgrounds\taliyah.png" />
+    <Content Include="public\images\backgrounds\talon.png" />
+    <Content Include="public\images\backgrounds\taric.png" />
+    <Content Include="public\images\backgrounds\teemo.png" />
+    <Content Include="public\images\backgrounds\thresh.png" />
+    <Content Include="public\images\backgrounds\tristana.png" />
+    <Content Include="public\images\backgrounds\triumphant_ryze.png" />
+    <Content Include="public\images\backgrounds\trundle.png" />
+    <Content Include="public\images\backgrounds\tryndamere.png" />
+    <Content Include="public\images\backgrounds\twisted_fate.png" />
+    <Content Include="public\images\backgrounds\twitch.png" />
+    <Content Include="public\images\backgrounds\udyr.png" />
+    <Content Include="public\images\backgrounds\urgot.png" />
+    <Content Include="public\images\backgrounds\varus.png" />
+    <Content Include="public\images\backgrounds\vayne.png" />
+    <Content Include="public\images\backgrounds\veigar.png" />
+    <Content Include="public\images\backgrounds\velkoz.png" />
+    <Content Include="public\images\backgrounds\vi.png" />
+    <Content Include="public\images\backgrounds\viktor.png" />
+    <Content Include="public\images\backgrounds\vladimir.png" />
+    <Content Include="public\images\backgrounds\volibear.png" />
+    <Content Include="public\images\backgrounds\warwick.png" />
+    <Content Include="public\images\backgrounds\wu_kong.png" />
+    <Content Include="public\images\backgrounds\xerath.png" />
+    <Content Include="public\images\backgrounds\xin_zhao.png" />
+    <Content Include="public\images\backgrounds\yasuo.png" />
+    <Content Include="public\images\backgrounds\yorick.png" />
+    <Content Include="public\images\backgrounds\zac.png" />
+    <Content Include="public\images\backgrounds\zed.png" />
+    <Content Include="public\images\backgrounds\ziggs.png" />
+    <Content Include="public\images\backgrounds\zilean.png" />
+    <Content Include="public\images\backgrounds\zyra.png" />
+    <Content Include="public\images\ranks\bronze.png" />
+    <Content Include="public\images\ranks\challenger.png" />
+    <Content Include="public\images\ranks\diamond.png" />
+    <Content Include="public\images\ranks\gold.png" />
+    <Content Include="public\images\ranks\master.png" />
+    <Content Include="public\images\ranks\platinum.png" />
+    <Content Include="public\images\ranks\silver.png" />
+    <Content Include="public\images\ranks\unranked.png" />
+    <Content Include="public\logo.png" />
+    <Content Include="public\search.png" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="public\Thumbs.db" />
+    <Content Include="README.md" />
+    <Content Include="typings.json" />
+    <Content Include="views\faq.jade" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+    <Content Include="views\error.jade" />
+    <Content Include="views\match_history.jade" />
+    <Content Include="views\partials\_head.jade" />
+    <Content Include="views\partials\_match_summary.jade" />
+    <Content Include="views\partials\_nav.jade" />
+    <Content Include="views\partials\_search.jade" />
+    <Content Include="views\profile.jade" />
+    <Content Include="views\profile_partials\_champion_filter.jade" />
+    <Content Include="views\profile_partials\_role_filter.jade" />
+    <Content Include="views\summoner.jade" />
+    <Content Include="views\summoner_parts\match_history.jade" />
+    <Content Include="views\summoner_parts\_champions_mini.jade" />
+    <Content Include="views\summoner_parts\_filter.jade" />
+    <Content Include="views\summoner_parts\_match_history_mini.jade" />
+    <Content Include="views\summoner_parts\_profile_overview.jade" />
+    <Content Include="views\summoner_parts\_triumph_score.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+    <Folder Include="API\mocks\" />
+    <Folder Include="API\mocks\json\" />
+    <Folder Include="bin\" />
+    <Folder Include="node_modules\" />
+    <Folder Include="node_modules\triumph-be\" />
+    <Folder Include="public\" />
+    <Folder Include="public\background\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\backgrounds\" />
+    <Folder Include="public\images\ranks\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+    <Folder Include="views\partials\" />
+    <Folder Include="views\profile_partials\" />
+    <Folder Include="views\summoner_parts\" />
+    <Folder Include="views\summoner_parts\profile_overview_parts\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

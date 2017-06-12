@@ -1,0 +1,28 @@
+﻿ul.nav.nav-tabs(role='tablist')
+    li.nav-item
+        a.nav-link.active(href="#kills",role="tab",data-toggle="tab") 
+            img(src="/images/triumphRanks/challengerMedium.png",height="30px")
+            h5 7.8
+            h6 kills
+    li.nav-item
+        a.nav-link(href="#deaths",role="tab",data-toggle="tab") Deaths
+    li.nav-item
+        a.nav-link(href="#assists",role="tab",data-toggle="tab") Assists
+    li.nav-item
+        a.nav-link(href="#cs",role="tab",data-toggle="tab") CS
+    li.nav-item
+        a.nav-link(href="#gold",role="tab",data-toggle="tab") Gold
+    li.nav-item
+        a.nav-link(href="#monsters",role="tab",data-toggle="tab") Monsters
+    li.nav-item
+        a.nav-link(href="#towers",role="tab",data-toggle="tab") Towers
+.col-xs-12.box(style='height:500px;border-top:none;background:white;')
+
+    .tab-content
+        .tab-pane.fade.in.active(id="kills") KILLS
+        .tab-pane.fade(id="deaths") DEATHS
+        .tab-pane.fade(id="assists") ASSISTS
+        .tab-pane.fade(id="cs") CS
+        .tab-pane.fade(id="gold") GOLD
+        .tab-pane.fade(id="monsters") MONSTERS
+        .tab-pane.fade(id="towers") TOWERS

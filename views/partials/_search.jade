@@ -1,0 +1,19 @@
+﻿form.form-inline.col-md-5.pull-sm-right
+    .input-group
+        .input-group-addon.navSearch(style="padding:0px;width:80px;")
+            select.custom-select.regionSelect
+                option(selected value='na') NA
+                option(value="euw") EUW
+                option(value="eune") EUNE
+                option(value="br") BR
+                option(value="lan") LAN
+                option(value="las") LAS
+                option(value="oce") OCE
+                option(value="ru") RU
+                option(value="tr") TR
+
+        input.form-control.summonerName.navSearch(placeholder='Search for a summoner',aria-label="Text input with segmented button dropdown")
+        .input-group-btn(style='width:50px;')
+            button.btn.summonerSubmit.navSearch(type='submit') 
+                img(src='/search.png', height="16px")
+                

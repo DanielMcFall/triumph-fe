@@ -1,0 +1,29 @@
+﻿extends layout
+
+block content
+    .parallax
+        include ./partials/_nav.jade
+        .container
+            .tagline
+                .col-lg-5(style='border-right:solid 1px rgba(238,240,240, 0.3)')
+                    h1(style='color:#fdb813') TRIUMPH.GG
+                    h2 In-depth League of Legends analysis and profiling.
+                .col-lg-7
+                    form.form-inline(class="#{path !== '/' ? 'col-md-5 pull-sm-right' : 'col-md-12'}", style="#{path !== '/' ? '' : 'padding-top:50px'}")
+                        .input-group
+                            .input-group-addon.homeSearch(style="padding:0px;width:80px;")
+                                select.custom-select.regionSelect
+                                    option(selected value='na') NA
+                                    option(value="euw") EUW
+                                    option(value="eune") EUNE
+                                    option(value="br") BR
+                                    option(value="lan") LAN
+                                    option(value="las") LAS
+                                    option(value="oce") OCE
+                                    option(value="ru") RU
+                                    option(value="tr") TR
+
+                            input.form-control.homeSearch.summonerName(placeholder='Search for a summoner',aria-label="Text input with segmented button dropdown")
+                            .input-group-btn
+                                button.btn.homeSearch.summonerSubmit(type='submit')
+                                    img(src='/search.png')

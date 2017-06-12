@@ -1,0 +1,14 @@
+﻿//- _nav.jade
+nav.navbar.navbar-static-top.navbar-dark.navHome(style='padding:0px;')
+    .container
+        a.navbar-brand(href='/',style='padding: 12px 0;')
+            img(src='/logo.png')
+        ul.nav.navbar-nav(class="#{path!== '/' ? '' : 'pull-sm-right'}")
+            li.nav-item
+                a.nav-link(href='/faq', class="#{path === '/faq' ? 'active' : ''}",style='padding: 12px 0;') FAQ
+                    span.sr-only (currently)
+            li.nav-item
+                a.nav-link(href='#',style='padding: 12px 0;') Champion Statistics
+                    span.sr-only (currently)
+        if path !== '/'
+            include _search.jade

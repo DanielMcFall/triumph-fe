@@ -1,0 +1,8 @@
+﻿#!/usr/bin/env node
+var debug = require('debug')('TriumphGG');
+var app = require('../app');
+
+var server = app.listen(process.env.PORT || '8080', function () {
+  console.log('App listening on port %s', server.address().port);
+  console.log('Press Ctrl+C to quit.');
+});

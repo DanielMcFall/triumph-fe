@@ -1,0 +1,8 @@
+﻿extends layout
+
+block content
+    .parallax(style='background-color:blue')
+        .container(style='top:20%;position:absolute;background-color:white')
+            h2= message
+            h2= error.status
+            pre #{error.stack}

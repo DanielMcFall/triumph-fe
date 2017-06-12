@@ -1,0 +1,42 @@
+﻿extends layout
+
+block content
+    - var bgUrl = "/images/backgrounds/" + "viktor" + ".png"
+    .parallaxSummoner(style='background-image: url(#{bgUrl});')
+        include ./partials/_nav.jade
+        .container.dark.text-center
+            .playerSummary.text-md-center 
+                .badges.col-md-5.hidden-sm-down
+                    each item in data.championMastery
+                        -var champion = champions[item.champion];
+                        .col-md-3
+                            img(src="/images/champions/#{champion.idName}.png")
+                            p #{Math.round(item.championPoints/1000)}K
+                .text-xs-center
+                    img(src="/images/ranks/#{data.rank.tier}.png")
+                .summonerHeader.text-xs-left
+                    h1(style='font-size:36px') #{data.name}
+                    h2(style='font-size:24px') #{data.rank.tier} #{data.rank.division}
+    .contentBackground
+        .container.content(style='padding:0;')
+            .profileTabs.col-xs-5
+                ul.nav.nav-tabs
+                    li.nav-item.active
+                        a(href='#profile',data-toggle="tab",role="tab") 
+                            span Profile
+                    li.nav-item
+                        a(href='#matchHistory',data-toggle="tab",role="tab") 
+                            span Match History
+                    li.nav-item
+                        a(href='#championPerformance',data-toggle="tab",role="tab") 
+                            span Champions
+            .col-xs-2.offset-md-5
+                .refresh
+                    span refresh
+    .tab-content
+        .container.content.tab-pane.fade(style='height:1000px;',id="profile")
+            p placeholder
+        .container.content.contents.tab-pane.fade.in.active(style='height:1000px;',id="matchHistory")
+            include matchHistory.jade
+        .container.content.contents.tab-pane.fade(style='height:1000px;',id="championPerformance")
+            h1 CHAMPION PERFORMANCE

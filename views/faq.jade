@@ -1,0 +1,26 @@
+﻿extends layout
+
+block content
+    .parallax
+        include ./partials/_nav.jade
+        .contentBackground
+          .container
+            h1 FAQ
+        .contentBackground.content
+          .container
+            .col-lg-12
+              h1  Triumph Score
+            .col-sm-8
+              h2 CALCULATION
+              p Triumph score rates performance in a game. A diamond triumph score technically means that you had the same impact on that game that as a diamond player.
+              p Data from millions of platinum+ games are analyzed to determine how each aspect of the game influences a specific champion and role’s chances of winning. The algorithm takes into account not only that you got a kill, but who the victim was, where they were killed, and what time during the game they were killed, and who assisted.
+            .col-sm-4
+              img(src="/images/triumphRanks/challengerMedium.png")
+      .contentBackground
+        .container
+          .col-xs-12(style="padding-top:70px")
+            .col-sm-4
+              img(src="/images/triumphRanks/challengerMedium.png")
+            .col-sm-8
+              h2 UPDATES
+              p The algorithm is updated periodically through a patch to account for changes to the game. There isn’t enough data in one patch (especially at the start) for accurate scoring so data is kept a few patches back. New, reworked, or infrequently picked champions scores are estimated based on similar champions in that role or class until enough data has been collected.

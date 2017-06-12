@@ -1,0 +1,35 @@
+.match(class= match.win ? "win" : "loss")
+    .date.pull-xs-left.text-xs-right
+        span 08/24
+        span 35m
+    .champion.pull-xs-left(class= (match.win) ? "win" : "loss")
+        - var champion = champions[match.champion];
+        img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{champion.idName}.png")
+    .gameAndSums.pull-xs-left
+        h7 match.queueType
+        span
+            img(src="/images/champions/viktor.png", width="24px")
+            img(src="/images/champions/viktor.png", width="24px")
+            img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/mastery/#{match.keystoneMastery}.png", width="24px")
+    .stats.pull-xs-left.text-xs-right
+        span
+            h5 #{match.kills}
+                span.lightText /
+                span.red #{match.deaths}
+                span.lightText /
+                | #{match.assists}
+        span #{match.cs} (#{ Math.round(match.cs / (match.matchDuration / 60) *10)/10}) CS
+    .items.pull-xs-left.hidden-sm-down
+        span
+            for item in [0,1,2,3,4,5]
+                - var itemName = "item" + item;
+                if match[itemName] != 0
+                    img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/#{match[itemName]}.png", width="36px")
+                else
+                    .blankItem
+
+            if match.item6 != 0
+                img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/#{match.item6}.png", width="24px")
+    .triumphScore.pull-xs-right
+        img(src="/images/triumphRanks/diamondMedium.png" style="position:absolute;")
+        img(src="/images/triumphRanks/I.png" style="position: absolute;")
