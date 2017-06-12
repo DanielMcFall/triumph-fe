@@ -4,8 +4,8 @@ var Promise = require('bluebird');
 var express = require('express');
 var request = require('request');
 var router = express.Router();
-var triumphApiUnpromisified = require('../node_modules/triumph-be/apiClient');
-var triumphApi = Promise.promisifyAll(triumphApiUnpromisified);
+// var triumphApiUnpromisified = require('../node_modules/triumph-be/apiClient');
+// var triumphApi = Promise.promisifyAll(triumphApiUnpromisified);
 
 /**
  * Requests a list of recent games from the /games endpoint using data from
@@ -27,7 +27,7 @@ function requestRecentGames(summonerData) {
                 summonerData: summonerData,
                 gameData: gameData
             };
-        });
+        }).catch(handleError);
 }
 
 /**
@@ -95,16 +95,34 @@ router.get('/', function (req, res) {
 router.get('/summoner/:region/:name', function (req, res) {
     var summonerName = req.params.name;
     var region = req.params.region;
+    res.render('summoner', {
+      title: "Mark",
+      data: {
+        name: "Summoner Name",
+        rank: {
+          tier: "platinum",
+          division: "3"
+        },
+        matchSummaries: [{
+          win: true,
+          championName: "irelia",
+          champion: {
+            idName: "irelia"
+          }
+        }]
 
-    return triumphApi.summonerSearchAsync(summonerName, region)
-        .then(showPage(res))
-        .catch(handleError);
+      },
+      champions: {idName: "irelia" }
+    });
 });
 
 router.get('/summoner/:region/:name/matchList', function (req, res) {
     var summonerName = req.params.name;
     var region = req.params.region;
-
+    res.render('partials/matchSummary', {
+        layout: false,
+        game: result
+    });
     triumphApi.matchListAsync(summonerName, region)
         .then(function (result) {
             res.render('partials/matchSummary', {

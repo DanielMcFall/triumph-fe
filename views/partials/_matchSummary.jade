@@ -4,7 +4,7 @@
         span 35m
     .champion.pull-xs-left(class= (match.win) ? "win" : "loss")
         - var champion = champions[match.champion];
-        img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{champion.idName}.png")
+        img(src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/#{match.championName}.png")
     .gameAndSums.pull-xs-left
         h7 match.queueType
         span
